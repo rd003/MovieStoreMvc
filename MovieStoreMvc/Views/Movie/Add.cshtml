@@ -1,0 +1,69 @@
+﻿@model MovieStoreMvc.Models.Domain.Movie
+@{
+}
+
+<form class="w-40" asp-action="Add" method="post" enctype="multipart/form-data">
+    <h2 class="pb-10">Add Movie</h2>
+    
+    <div class="input-container">
+        <label asp-for="Title" class="w-40">Title</label>
+        <input type="text" class="input" asp-for="Title">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="Title"> </span>
+    </div>
+
+    <div class="input-container">
+        <label asp-for="Director" class="w-40">Image</label>
+        <input type="file" asp-for="ImageFile">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="ImageFile"> </span>
+    </div>
+
+    <div class="input-container">
+        <label asp-for="Genres" class="w-40">Genre</label>
+        <select asp-items="Model.GenreList" class="input" asp-for="Genres" multiple>
+            <option value="">--select--</option>
+        </select>
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="Genres"> </span>
+    </div>
+
+    <div class="input-container">
+        <label asp-for="ReleaseYear" class="w-40">Released Year</label>
+        <input type="text" class="input" asp-for="ReleaseYear">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="ReleaseYear"> </span>
+    </div>
+
+    <div class="input-container">
+        <label asp-for="Cast" class="w-40">Cast</label>
+        <input type="text" class="input" asp-for="Cast">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="Cast"> </span>
+    </div>
+
+    <div class="input-container">
+        <label asp-for="Director" class="w-40">Director</label>
+        <input type="text" class="input" asp-for="Director">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="Director"> </span>
+    </div>
+
+    @if (TempData["msg"] != null)
+    {
+        <div class="alert mb-1">
+            @TempData["msg"]
+        </div>
+    }
+
+    <div class="input-container">
+        <button class="btn btn-default" type="submit">Save</button>
+        <a class="btn btn-sec" href="/Movie/MovieList">All records</a>
+    </div>
+</form>

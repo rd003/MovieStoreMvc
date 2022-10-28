@@ -1,0 +1,263 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: rgb(255, 255, 255);
+  --font-mukta: "Mukta", sans-serif;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  /* padding:0 3rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-bar {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  /* background-color: var(--nav-bg-color); */
+  padding: 1.1rem 0.5px;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 3px solid rgb(84, 84, 84);
+}
+
+.logo {
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: rgb(25, 25, 25);
+}
+.nav-link {
+  list-style: none;
+  display: flex;
+}
+.nav-link > li {
+  position: relative;
+}
+.nav-link > li a {
+  padding: 0 1.2rem;
+  text-decoration: none;
+  font-size: 16px;
+  color: rgb(25, 25, 25);
+}
+
+.nav-link li a:hover {
+  color: rgb(90, 90, 90);
+}
+
+.dropdown-nav-link {
+  position: absolute;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  margin-top: 0.2rem;
+  min-width: 6.5rem;
+  transition: all 0.5s ease;
+  visibility: hidden;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.dropdown-nav-link li a {
+  padding: 0.4rem 1rem;
+  display: block;
+}
+
+.nav-link li:hover > ul,
+.nav-link li:focus-within > ul,
+.nav-link li ul:hover,
+.nav-link li ul:focus {
+  visibility: visible;
+}
+
+.container {
+  padding: 2rem;
+  width: 100%;
+}
+
+.search-bar{
+  width: 100%; 
+  padding: 0 2%;
+}
+.search-bar input[type="text"]{
+  padding: 0.7rem;
+  border: 1px solid lightgray;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  width: 25%;
+}
+.search-bar button{
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 0.7rem 0.9rem;
+  border: none;
+  background-color: rgb(192, 192, 192);
+  color: black;
+  cursor: pointer;
+}
+
+.movies {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  /* background-color: red; */
+  font-family: var(--font-mukta);
+}
+.movie-card {
+    padding: 2%;
+    margin: 2%;
+    /*flex-basis: 16%;*/
+    width: 16%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    cursor: pointer;
+    /* background-color: yellow; */
+}
+
+.movie-card:hover {
+  cursor: pointer;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 18px 30px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+.movie-image img {
+  width: 100%;
+}
+
+/* Pagination links */
+.pagination{
+  display: flex;
+  justify-content: right;
+}
+.pagination a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: rgb(169, 30, 255);
+  color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+footer {
+  width: 100%;
+  height: 3rem;
+  background-color: rgb(240, 240, 240);
+  font-size: 1rem;
+  font-family: var(--font-mukta);
+  padding: 1% 2%;
+  text-align: right;
+}
+
+/* utilities start */
+.w-90 {
+  width: 90%;
+}
+.w-80 {
+  width: 80%;
+}
+.w-70 {
+  width: 60%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-40 {
+  width: 40%;
+}
+.w-30 {
+  width: 30%;
+}
+
+.error {
+  color: red;
+}
+.success {
+  color: green;
+}
+
+.mb-1 {
+  margin-bottom: 0.7rem;
+}
+
+.mt-1 {
+  margin-top: 0.7rem;
+}
+.pt-1 {
+  padding-top: 0.7rem;
+}
+.pb-1 {
+  padding-top: 0.7rem;
+}
+.m-auto {
+  margin: auto;
+}
+/* utilities end */
+
+.movie-detail {
+  display: flex;
+  font-family: var(--font-mukta);
+  max-height: 50%;
+}
+.img-container {
+  max-width: 40%;
+}
+.img-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+.detail-container {
+  padding: 0 1.2rem;
+}
+
+
+/* Media queries */
+
+@media (max-width: 920px) {
+  .movie-card {
+    flex-basis: 21%;
+  }
+}
+
+@media (max-width: 600px) {
+  .movie-card {
+    flex-basis: 46%;
+  }
+
+  .movie-detail {
+    display: flex;
+   flex-direction: column;
+  }
+  .detail-container {
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-card {
+    flex-basis: 96%;
+  }
+}

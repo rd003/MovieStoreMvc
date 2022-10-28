@@ -1,0 +1,36 @@
+﻿@model MovieStoreMvc.Models.DTO.LoginModel
+@{
+}
+
+<form class="w-40" asp-action="Login" method="post">
+    <h2 class="pb-10">Login</h2>
+    <div class="input-container">
+        <label asp-for="Username" class="w-40">Username</label>
+        <input type="text" class="input" asp-for="Username">
+    </div>
+    <div class="message-box pd-x-28 error">
+       <span asp-validation-for="Username"></span>
+    </div>
+
+
+    <div class="input-container">
+        <label asp-for="Password" class="w-40">Password</label>
+        <input type="password" class="input" asp-for="Password">
+    </div>
+    <div class="message-box pd-x-28 error">
+        <span asp-validation-for="Password"></span>
+    </div>
+  
+
+    @if (TempData["msg"] != null)
+    {
+        <div class="alert mb-1">
+            @TempData["msg"]
+    </div>
+    }
+
+    <div class="input-container">
+        <button class="btn btn-default" type="submit">Login</button>
+        @*<a class="btn btn-sec" href="#">Add more</a>*@
+    </div>
+</form>
