@@ -7,14 +7,15 @@ Now upgraded to .net 8.0
    git clone https://github.com/rd003/MovieStoreMvc.git
 2. open `appsettings.json` file and update connection string's `data source=your server name`
    
-   ```
+   ``` 
     "ConnectionStrings": {
           "conn": "data source=RAVINDRA\\MSSQLSERVER01;initial catalog=MovieStoreMvc; integrated security=true;encrypt=false"
-     } 
-```
-4. Delete `Migrations` folder
-5. Open Tools > Package Manager > Package manager console
-6. Run these 2 commands
+     }
+   ```
+
+3. Delete `Migrations` folder
+4. Open Tools > Package Manager > Package manager console
+4. Run these 2 commands
     ```
      (i) add-migration init
      (ii) update-database
