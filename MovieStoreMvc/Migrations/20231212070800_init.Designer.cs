@@ -12,8 +12,8 @@ using MovieStoreMvc.Models.Domain;
 namespace MovieStoreMvc.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20221027055012_mig2")]
-    partial class mig2
+    [Migration("20231212070800_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -260,7 +260,6 @@ namespace MovieStoreMvc.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MovieImage")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ReleaseYear")
