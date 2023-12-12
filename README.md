@@ -9,7 +9,7 @@ Now upgraded to .net 8.0
    
    ``` 
     "ConnectionStrings": {
-          "conn": "data source=RAVINDRA\\MSSQLSERVER01;initial catalog=MovieStoreMvc; integrated security=true;encrypt=false"
+          "conn": "data source=your_server_name;initial catalog=MovieStoreMvc; integrated security=true;encrypt=false"
      }
    ```
 
