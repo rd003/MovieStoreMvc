@@ -1,6 +1,6 @@
 # MovieStoreMvc
 
-Now upgraded to .net 8.0
+Now upgraded to .net 9.0
 
 # How to run it
 1. clone the project
