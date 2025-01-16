@@ -12,7 +12,7 @@ It is a source code of youtube tutorial. `MovieStoreMvc` is a fullstack applicat
 
 ## Youtube tutorial link
 
-[MovieStoreMVC](youtu.be/cQ3HH0MJqDs](https://www.youtube.com/watch?v=cQ3HH0MJqDs)
+[MovieStoreMVC](https://www.youtube.com/watch?v=cQ3HH0MJqDs)
 
 ## How to run it?
 
