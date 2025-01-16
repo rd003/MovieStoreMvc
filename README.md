@@ -14,7 +14,7 @@ It is a source code of youtube tutorial. `MovieStoreMvc` is a fullstack applicat
 
 [MovieStoreMVC](youtu.be/cQ3HH0MJqDs)
 
-# How to run it?
+## How to run it?
 
 1. clone the project
    `git clone https://github.com/rd003/MovieStoreMvc.git`
