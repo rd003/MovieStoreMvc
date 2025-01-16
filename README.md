@@ -12,17 +12,11 @@ Now upgraded to .net 8.0
           "conn": "data source=your_server_name;initial catalog=MovieStoreMvc; integrated security=true;encrypt=false"
      }
    ```
-
-3. Delete `Migrations` folder
-4. Open Tools > Package Manager > Package manager console
-5. Run these 2 commands
-    ```
-     (i) add-migration init
-     (ii) update-database
-     ````
-7. Now you can run this project
+3. Open Tools > Package Manager > Package manager console
+4. Run the command `update-database`.
+5. Now you can run this project.
 
 ## How to Register as a admin and login?
 1. There is a controller `UserAuthentication` and a commented method `Register`. Uncomment the `Register` method
-2. Run the project and hit the url `https://localhost:7095/UserAuthentication/Register`. You will be registered as a admin. Now you can re comment the register user (for privacy).
+2. Run the project and hit the url `https://localhost:7095/UserAuthentication/Register`. You will be registered as a admin. Now you can re-comment the register user (for privacy).
 3. Now you can login with credentials `Username: admin, password: Admin@123`
